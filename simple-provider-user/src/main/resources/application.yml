@@ -1,0 +1,45 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    druid:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://127.0.0.1:3306/cloud-study?characterEncoding=utf8&useSSL=true&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      #连接池建立时创建的初始化连接数
+      initial-size: 5
+      #连接池中最大的活跃连接数
+      max-active: 10
+      #连接池中最小的活跃连接数
+      min-idle: 5
+      # 配置获取连接等待超时的时间
+      max-wait: 10000
+      # 打开PSCache，并且指定每个连接上PSCache的大小
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      #是否在获得连接后检测其可用性
+      test-on-borrow: false
+      #是否在连接放回连接池后检测其可用性
+      test-on-return: false
+      ##是否在连接空闲一段时间后检测其可用性
+      test-while-idle: true
+      # 配置监控统计拦截的filters，stat用于监控界面，'wall'用于防火墙防御sql注入, slf4j用于druid记录sql日志
+      filter: stat,slf4j,wall
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 合并多个DruidDataSource的监控数据
+      use-global-data-source-stat: false
+      remove-abandoned: true
+      remove-abandoned-timeout: 80
+
+#logging:
+#  config: classpath:logback-spring.xml

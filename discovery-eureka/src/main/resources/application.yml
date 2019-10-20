@@ -1,31 +1,42 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: yanjunmin
+    password: yanjunmin123
+---
 spring:
   application:
     name: discovery-eureka
+  profiles: peer1
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #将自己注册到peer2上去
+      defaultZone: http://localhost:8762/eureka/
+  instance:
+    #指定当profiles=peer1时 主机名是peer1
+    hostname: peer1
+    prefer-ip-address: true
+
+---
+
+spring:
+  application:
+    name: discovery-eureka
+  profiles: peer2
 server:
   port: 8762
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
-      #将自己注册到peer2上去
-      defaultZone: http://localhost:8761/eureka/
+      #将自己注册到peer1上去
+      defaultZone: http://localhost:8762/eureka/
   instance:
-    #指定当profiles=peer1时 主机名是peer1
-    hostname: peer1
-#---
-#spring:
-#  profiles: peer1
-#
-#---
-#spring:
-#  profiles: peer2
-#server:
-#  port: 8762
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    service-url:
-#      #将自己注册到peer1上去
-#      defaultZone: http://localhost:8761/eureka/
-#  instance:
-#    hostname: peer2
+    hostname: peer2

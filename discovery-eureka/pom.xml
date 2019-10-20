@@ -8,7 +8,7 @@
         <version>1.4.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>top.wetyle</groupId>
+    <groupId>top.westyle</groupId>
     <artifactId>discovery-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>discovery-eureka</name>
@@ -25,7 +25,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

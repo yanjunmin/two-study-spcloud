@@ -1,4 +1,4 @@
-package top.wetyle.discovery.eureka;
+package top.westyle.discovery.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

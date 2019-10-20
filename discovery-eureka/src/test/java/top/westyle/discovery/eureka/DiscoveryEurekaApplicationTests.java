@@ -1,4 +1,4 @@
-package top.wetyle.discovery.eureka;
+package top.westyle.discovery.eureka;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

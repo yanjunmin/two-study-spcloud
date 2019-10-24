@@ -28,6 +28,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <!--此包中包含ribbon-->
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
         <dependency>

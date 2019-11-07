@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>top.westyle</groupId>
-    <artifactId>geteway-zuul</artifactId>
+    <artifactId>gateway-zuul</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>geteway-zuul</name>
+    <name>gateway-zuul</name>
     <description>geteway-zuul</description>
 
     <properties>

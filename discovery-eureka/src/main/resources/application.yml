@@ -37,6 +37,6 @@ eureka:
     fetch-registry: true
     service-url:
       #将自己注册到peer1上去
-      defaultZone: http://yanjunmin:yanjunmin123@localhost:8762/eureka/
+      defaultZone: http://yanjunmin:yanjunmin123@localhost:8761/eureka/
   instance:
     hostname: peer2

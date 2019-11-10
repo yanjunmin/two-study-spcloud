@@ -24,6 +24,7 @@ public class AggregationService {
             observable.onCompleted();
         });
     }
+    @HystrixCommand(fallbackMethod = "fallback")
     public  Observable<User> getUserById(Long id) {
         //创建被观察者
         return Observable.create(observable -> {

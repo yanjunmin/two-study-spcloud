@@ -14,8 +14,8 @@ spring:
     data: classpath:data.sql
 logging:
   config: classpath:logback-spring.xml
-#logging:
-#  level: info
+  level: debug
+
 eureka:
   client:
     service-url:
